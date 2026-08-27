@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #3498db;
+        }
+        .calculator {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #764ba2;
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calculator</h1>
+        <input type="number" id="num1" placeholder="Enter first number" step="any">
+        <input type="number" id="num2" placeholder="Enter second number" step="any">
+        <select id="operation">
+            <option value="">Select an operation</option>
+            <option value="Plus">Plus (+)</option>
+            <option value="Minus">Minus (-)</option>
+            <option value="Multiply">Multiply (×)</option>
+            <option value="Divide">Divide (÷)</option>
+        </select>
+        <button onclick="calculate()">Calculate</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
